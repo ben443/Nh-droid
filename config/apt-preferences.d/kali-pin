@@ -1,0 +1,9 @@
+# Pin Kali packages with lower priority to avoid conflicts
+Package: *
+Pin: release o=Kali
+Pin-Priority: 100
+
+# Allow specific Kali tools to be installed
+Package: kali-linux-core kali-tools-* nethunter-*
+Pin: release o=Kali
+Pin-Priority: 500
