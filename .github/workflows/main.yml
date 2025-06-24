@@ -30,4 +30,6 @@ jobs:
       - name: Run main shell script
         run: |
           chmod +x build.sh
+          chmod +x scripts/download_assets.sh
+          chmod +x scripts/setup_repositories.sh
           sudo bash build.sh
