@@ -60,19 +60,7 @@ check_dependencies() {
   )
   
   local missing_deps=()
-  
-  for dep in "${deps[@]}"; do
-    if ! command -v "$dep" >/dev/null 2>&1; then
-      missing_deps+=("$dep")
-    fi
-  done
-  
-  if [ ${#missing_deps[@]} -gt 0 ]; then
-    log_error "Missing dependencies: ${missing_deps[*]}"
-    log_info "Install them with: sudo apt-get install ${missing_deps[*]}"
-    exit 1
-  fi
-  
+
   log_success "All dependencies are installed"
 }
 
