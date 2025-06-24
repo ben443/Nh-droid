@@ -1,0 +1,17 @@
+name: Manual Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-shell-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run main shell script
+        run: |
+          # Replace 'your-script.sh' with the actual script you want to run
+          chmod +x your-script.sh
+          sudo bash build.sh
