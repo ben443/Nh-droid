@@ -10,8 +10,24 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install required packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            debootstrap \
+            qemu-user-static \
+            binfmt-support \
+            wget \
+            curl \
+            git \
+            rsync \
+            squashfs-tools \
+            genisoimage \
+            syslinux-utils \
+            parted \
+            kpartx
+
       - name: Run main shell script
         run: |
-          # Replace 'your-script.sh' with the actual script you want to run
           chmod +x build.sh
           sudo bash build.sh
