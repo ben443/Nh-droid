@@ -13,5 +13,5 @@ jobs:
       - name: Run main shell script
         run: |
           # Replace 'your-script.sh' with the actual script you want to run
-          chmod +x your-script.sh
+          chmod +x build.sh
           sudo bash build.sh
